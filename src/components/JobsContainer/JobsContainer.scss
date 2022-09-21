@@ -1,0 +1,47 @@
+.jobs-container {
+    display: flex;
+    flex-wrap: wrap;
+    color: black;
+    gap: 18px;
+    .jobs-content {
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 6px #557DA526;
+        border-radius: 5px;
+
+        .card-body {
+            .card-title {
+                font-size: 1.7rem;
+                margin-bottom: 10px;
+
+            }
+
+            .card-text {
+                font-size: 1.4rem;
+                opacity: 0.8;
+            }
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            span {
+                margin-left: 8px;
+            }
+
+            button {
+                width: 125px;
+                height: 32px;
+                background: #43AFFF33 0% 0% no-repeat padding-box;
+                border-radius: 5px;
+                border: none;
+                color: #303F60;
+            }
+        }
+
+
+    }
+
+
+}

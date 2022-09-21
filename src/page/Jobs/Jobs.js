@@ -1,10 +1,10 @@
 import React from 'react';
 import "./Jobs.scss";
 import homeIcon from "../../assets/homeIcon.png";
-import { ReactComponent as NotePad } from "../../assets/writing.svg"
-import { ReactComponent as LocationIcon } from "../../assets/locationIcon.svg"
 
-import Button from '../../components/common/Button';
+import NoJobs from '../../components/NoJobs';
+import JobsContainer from '../../components/JobsContainer';
+import Modal from '../../components/Modal';
 
 const jobData = [
     {
@@ -65,13 +65,6 @@ const jobData = [
     },
 ]
 
-const ApplicationButton = ({children})=>{
-
-
-}
-
-
-
 const Jobs = () => {
     return (
         <>
@@ -84,33 +77,16 @@ const Jobs = () => {
                 <div className='header'>
                     <h1>Job posted by you</h1>
                 </div>
-                {/* 
-                <section className="no-jobs-container">
-                    <div className='no-jobs'>
-                        <NotePad/>
-                        <p className='text'>Your posted jobs will show here!</p>
-                        <Button primary>Post a job</Button>
-                    </div>
-                </section> */}
+
+                {/* <NoJobs /> */}
+                <JobsContainer jobData={jobData} />
 
 
-                <section className='jobs-container'>
-                    {jobData.map((job) =>
-                        (<div className="card jobs-content" key={job.id} style={{width:"260px"}}>
-                            <div className="card-body">
-                                <h5 className="card-title">{job.designation}</h5>
-                                <p className="card-text">{job.description}</p>
-                                <div className='footer'>
-                                    <div><LocationIcon/><span>{job.location}</span></div>
-                                    <button>View application</button>
-                                </div>
-                            </div>
-                        </div>)
-                        )}
+                <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+                    Launch static backdrop modal
+                </button>
 
-    
-
-                </section>
+                <Modal/> 
             </div>
         </>
     )

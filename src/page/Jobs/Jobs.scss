@@ -1,14 +1,14 @@
 .job {
     height: 210px;
     background: linear-gradient(248deg, #303F60, #1A253C);
-    padding: 8px 160px 0 190px;
+    padding: 0.8rem 10rem 0 17.3rem;
     color: white;
 
     .page {
         font-size: 15px;
         display: flex;
         gap: 5px;
-        width: 48px;
+        width: 4.8rem;
         align-items: center;
 
         img {
@@ -20,77 +20,100 @@
         margin-top: 2.4rem;
     }
 
-    .no-jobs-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 80vh;
+    .modal-container {
+        border-radius: 20px;
+        padding: 10px;
+        width: 620px;
 
-
-        .no-jobs {
-            display: flex;
-            flex-direction: column;
-            gap: 19px;
-            align-items: center;
-            font: 24px;
-
-
-            .text {
+        // height: 100%;
+        .body {
+            p {
                 color: #303F60;
-                font-size: 24px;
-                text-align: center;
+                font-size: 17px;
+            }
+
+            .applicant-container {
+                background-color: #A9AFBC;
+                background: #a9afbc38 0% 0% no-repeat padding-box;
+                border-radius: 10px;
+                width: 100%;
+                overflow-y: auto;
+                height: 600px;
+
+                .applicant {
+                    padding: 9px;
+                    gap: 20px;
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    .main {
+                        border: 1px solid #303F6080;
+                        border-radius: 5px;
+                        font-size: 15px;
+                        color: #303F60;
+                        width: 250px;
+                        height: 159px;
+                        padding: 10px;
+
+                        .top-bar {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: flex-start;
+                            gap: 20px;
+
+                            .profile-image {
+                                background-color: #D9EFFF;
+                                color: #303F60;
+                                font-size: 20px;
+                                width: 50px;
+                                height: 50px;
+                                border-radius: 25px;
+                                opacity: 1;
+                                text-align: center;
+                            }
+
+                            .information {
+
+                                .name {
+                                    font-weight: 800;
+                                    font-size: 20px
+                                }
+
+                                p {
+
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+
+                        .skills-container {
+                            h5 {
+                                font-weight: 800;
+                            }
+
+                            p {
+                                font-size: 15px;
+                            }
+
+                        }
+                    }
+                }
             }
         }
     }
-    .jobs-container {
-        display: flex;
-        flex-wrap: wrap;
-        color: black;
-        gap: 18px;
+
+}
 
 
-        .jobs-content {
-            background: #FFFFFF 0% 0% no-repeat padding-box;
-            box-shadow: 0px 3px 6px #557DA526;
-            border-radius: 5px;
-
-            .card-body {
-                .card-title {
-                    font-size: 1.7rem;
-                    margin-bottom: 10px;
-
-                }
-
-                .card-text {
-                    font-size: 1.4rem;
-                    opacity: 0.8;
-                }
-            }
-
-            .footer {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-
-                span {
-                    margin-left: 8px;
-                }
-
-                button {
-                    width: 125px;
-                    height: 32px;
-                    /* UI Properties */
-                    background: #43AFFF33 0% 0% no-repeat padding-box;
-                    border-radius: 5px;
-                    border: none;
-                    color: #303F60;
-                }
-            }
-
-
-        }
-
-
+@media (max-width: 350px) {
+    .job {
+        padding: 0.8rem 5rem 0 6rem;
     }
+}
 
+
+@media (max-width: 350px) {
+    .job {
+        padding: 0.8rem 5rem 0 6rem;
+    }
 }
