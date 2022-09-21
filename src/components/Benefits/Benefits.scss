@@ -1,0 +1,37 @@
+.mid {
+    p {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+    }
+
+    .group-content {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+
+        .card {
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            box-shadow: 0px 3px 6px #557DA526;
+            border-radius: 5px;
+            padding: 24px 20px 30px 20px;
+
+            .card-body {
+                .card-title {
+                    color: #43AFFF;
+                    font-size: 2.2rem;
+                    margin-bottom: 29px;
+                }
+
+                .card-text {
+                    font-size: 1.4rem;
+                }
+            }
+
+
+        }
+
+    }
+
+
+
+}
