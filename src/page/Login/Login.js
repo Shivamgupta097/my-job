@@ -1,11 +1,12 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import SignInForm from '../../components/SignInForm';
+import "./Login.scss"
 
 
 const Login = () => {
   return (
-    <div className='login'>
-        <Outlet/>
+    <div className='login-container'>
+      <SignInForm/>
     </div>
   )
 }

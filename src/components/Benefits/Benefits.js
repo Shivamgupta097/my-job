@@ -27,7 +27,7 @@ const Benefits = () => {
 
             <div className="group-content">
                 {data.map((cur) =>
-                (<div className="card" key={cur.id}>
+                (<div className="card" style={{width:"341px"}} key={cur.id}>
                     <div className="card-body">
                         <h5 className="card-title">{cur.title}</h5>
                         <p className="card-text">{cur.text}</p>

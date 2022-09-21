@@ -6,7 +6,7 @@ import "./Hero.scss";
 
 const Hero = () => {
     return (
-        <section className='container hero'>
+        <section className='hero container'>
             <div className='row d-flex justify-content-between'>
                 <div className='content-container col-lg-4 col-12'>
                     <div className='text-container'>

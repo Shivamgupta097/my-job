@@ -1,25 +1,26 @@
 .mid {
     p {
         font-size: 2.2rem;
-        margin-bottom: 40px;
+        margin-bottom: 4rem;
     }
 
     .group-content {
         display: flex;
+        flex-wrap: nowrap;
         justify-content: space-between;
-        gap: 30px;
+        gap: 3rem;
 
         .card {
             background: #FFFFFF 0% 0% no-repeat padding-box;
             box-shadow: 0px 3px 6px #557DA526;
             border-radius: 5px;
-            padding: 24px 20px 30px 20px;
+            padding: 2.4rem 2rem 3rem 2rem;
 
             .card-body {
                 .card-title {
                     color: #43AFFF;
                     font-size: 2.2rem;
-                    margin-bottom: 29px;
+                    margin-bottom: 3rem;
                 }
 
                 .card-text {
@@ -34,4 +35,19 @@
 
 
 
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width:250px) and (max-width: 768px) {
+
+.mid{
+    .group-content{
+        display: flex;
+        justify-content: center;
+       flex-wrap: wrap;
+}
+
+}
+    
 }
