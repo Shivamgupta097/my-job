@@ -1,54 +1,30 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useContext, useEffect } from 'react';
+import Cookies from 'universal-cookie';
 import { ReactComponent as CrossIcon } from "../../assets/crossIcon.svg";
+import { ApplicationContext } from '../../context/ApplicationContext';
+import UserDp from '../common/UserDp';
+import "./Modal.scss"
 
-
-const applicantData = [
-    {
-        id: 1,
-        name: "Eliza Lucas",
-        email: "abc123@email.com"
-    },
-    {
-        id: 2,
-        name: "Eliza Lucas",
-        email: "abc123@email.com"
-    }, {
-        id: 3,
-        name: "Eliza Lucas",
-        email: "abc123@email.com"
-    }, {
-        id: 4,
-        name: "Eliza Lucas",
-        email: "abc123@email.com"
-    }, {
-        id: 5,
-        name: "Eliza Lucas",
-        email: "abc123@email.com"
-    }, {
-        id: 6,
-        name: "Eliza Lucas",
-        email: "abc123@email.com"
-    }, {
-        id: 7,
-        name: "Eliza Lucas",
-        email: "abc123@email.com"
-    },
-    {
-        id: 8,
-        name: "Eliza Lucas",
-        email: "abc123@email.com"
-    }, {
-        id: 9,
-        name: "Eliza Lucas",
-        email: "abc123@email.com"
-    }, {
-        id: 10,
-        name: "Eliza Lucas",
-        email: "abc123@email.com"
-    },
-]
 
 const Modal = () => {
+    const { id , setApplicantData,applicantData} = useContext(ApplicationContext);
+
+    const cookies =new Cookies();
+    const token = cookies.get("tkn");
+
+    useEffect(() => {
+        axios.get(`https://jobs-api.squareboat.info/api/v1/recruiters/jobs/${id}/candidates`,{
+            headers: {
+                Authorization: token
+            }
+        }).then(response => {
+            const data = response.data.data;
+            setApplicantData(data);
+        }).catch((error => console.log(error)))
+
+    }, [id])
+
     return (
         <div className="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div className="modal-dialog" style={{ width: "100vw" }}>
@@ -60,13 +36,14 @@ const Modal = () => {
                         </button>
                     </div>
                     <div className="modal-body body">
-                        <p>Total 35 applications</p>
+                        <p>Total {applicantData.length} applications</p>
                         <div className='applicant-container container'>
                             <div className="applicant">
-                                {applicantData.map((applicant) =>
+                                {
+                                applicantData.map((applicant) =>
                                 (<div className='card main px-2' key={applicant.id}>
                                     <div className='top-bar'>
-                                        <h2 className='profile-image'>E</h2>
+                                        <UserDp name={applicant.name}/>
                                         <div className="information">
                                             <p className="name">{applicant.name}</p>
                                             <p className="email">{applicant.email}</p>
@@ -75,10 +52,9 @@ const Modal = () => {
 
                                     <div className="skills-container">
                                         <h5>Skills</h5>
-                                        <p>Coding, designing, graphics, website, app ui</p>
+                                        <p>{applicant.skills}</p>
                                     </div>
                                 </div>))}
-
                             </div>
                         </div>
                     </div>

@@ -5,8 +5,11 @@ import "./Login.scss"
 
 const Login = () => {
   return (
-    <div className='login-container'>
-      <SignInForm/>
+
+    <div className="bg-color">
+      <div className='login-container'>
+        <SignInForm />
+      </div>
     </div>
   )
 }

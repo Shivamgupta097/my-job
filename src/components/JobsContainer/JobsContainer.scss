@@ -7,12 +7,11 @@
         background: #FFFFFF 0% 0% no-repeat padding-box;
         box-shadow: 0px 3px 6px #557DA526;
         border-radius: 5px;
-
         .card-body {
+            min-height:200px;
             .card-title {
                 font-size: 1.7rem;
                 margin-bottom: 10px;
-
             }
 
             .card-text {
@@ -22,15 +21,28 @@
         }
 
         .footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            // position: absolute;
+            // bottom: 8px;
+            // display: flex;
+            // justify-content: space-between;
+            // align-items: center;
 
-            span {
-                margin-left: 8px;
+            .location{
+                margin-top: 10px;
+                position: absolute;
+                left: 8px;
+                bottom: 23px;
+
+                span {
+                    margin-left: 8px;
+                }
+    
             }
-
+            
             button {
+                position: absolute;
+                right: 8px;
+                bottom: 15px;
                 width: 125px;
                 height: 32px;
                 background: #43AFFF33 0% 0% no-repeat padding-box;

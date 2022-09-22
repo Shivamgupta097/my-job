@@ -14,9 +14,8 @@
       outline: none;
     }
   }
-
-  input[type='password'] {
-    letter-spacing: 0;
+  .form-input:focus true{
+    border: red;
   }
 
   .form-input-label {

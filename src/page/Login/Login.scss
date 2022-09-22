@@ -1,7 +1,11 @@
+.bg-color {
+    height: 362px;
+    background: linear-gradient(248deg, #303F60, #1A253C);
 
-.login-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 80vh;
+    .login-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80vh;
+    }
 }

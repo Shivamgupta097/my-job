@@ -1,0 +1,20 @@
+.main-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+  gap: 6px;
+
+  .menu{
+    margin-top: 10px;
+
+    .item{
+        cursor: pointer;
+        font-size: 14px;
+        color:#303F60;
+        background-color: none;
+      }
+
+  }
+
+  
+}
