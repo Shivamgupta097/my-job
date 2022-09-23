@@ -17,7 +17,6 @@ let data = JSON.parse(localStorage.getItem("user"));
 export const UserProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(data);
 
-  const navigate = useNavigate();
 
 
 
