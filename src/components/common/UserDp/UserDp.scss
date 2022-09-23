@@ -1,16 +1,15 @@
-.parent{
+.parent {
     width: 44px;
     height: 44px;
     border-radius: 25px;
     display: grid;
     place-items: center;
-    background-color:#D9EFFF ;
-
+    background-color: #D9EFFF;
 }
 
-.name{
+.name {
     font-size: 18px;
-    color:'#303F60';
+    color: '#303F60';
     padding-top: 5px;
     opacity: 0.8;
 }

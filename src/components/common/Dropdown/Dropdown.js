@@ -7,23 +7,23 @@ import { UserContext } from '../../../context/userContext';
 import Cookies from 'universal-cookie';
 
 const Dropdown = () => {
-    const navigate =useNavigate();
-    const {currentUser,setCurrentUser}=useContext(UserContext)
-    const {name} = currentUser
-  
-    
-    // logout function 
-    const logoutHandler=() =>{
-      navigate('/');
-      setCurrentUser(null);
-      localStorage.removeItem("user");
-      const cookie =new Cookies();
-      cookie.remove("tkn");
-    }
+  const navigate = useNavigate();
+  const { currentUser, setCurrentUser } = useContext(UserContext)
+  const { name } = currentUser
 
-    return (
+
+  // logout function 
+  const logoutHandler = () => {
+    navigate('/');
+    setCurrentUser(null);
+    localStorage.removeItem("user");
+    const cookie = new Cookies();
+    cookie.remove("tkn");
+  }
+
+  return (
     <div className="main-container">
-      <UserDp name={name}/>
+      <UserDp name={name} />
       <div className="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><DownArrow /></div>
       <div className="dropdown-menu menu" aria-labelledby="dropdownMenuButton">
         <p className="dropdown-item item" onClick={logoutHandler}>Logout</p>

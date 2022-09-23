@@ -10,7 +10,7 @@ const JobsContainer = ({ posts }) => {
     return (
         <section className='jobs-container'>
             {posts.map((post) =>
-            (<div className="card jobs-content" key={post.id} style={{ width: "270px" }}>
+            (<div className="card jobs-content" key={post.id} style={{  }}>
                 <div className="card-body">
                     <h5 className="card-title">{post.title.slice(0, 10)}</h5>
                     <p className="card-text">{post.description.slice(0, 150)}</p>

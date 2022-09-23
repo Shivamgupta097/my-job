@@ -12,8 +12,7 @@ const NoJobs = () => {
                 <Button primary>Post a job</Button>
             </div>
         </section>
-
-    )
+     )
 }
 
 export default NoJobs

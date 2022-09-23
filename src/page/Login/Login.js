@@ -5,7 +5,6 @@ import "./Login.scss"
 
 const Login = () => {
   return (
-
     <div className="bg-color">
       <div className='login-container'>
         <SignInForm />

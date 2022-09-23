@@ -2,9 +2,7 @@ import React from "react";
 import "./FormInput.scss"
 
 const FormInput = ({ label, ...otherProps }) => {
-
-
-    return (
+     return (
         <div className="group">
 
             {label && (

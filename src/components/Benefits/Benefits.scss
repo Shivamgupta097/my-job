@@ -33,21 +33,18 @@
 
     }
 
-
-
 }
-
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media (min-width:250px) and (max-width: 768px) {
 
-.mid{
-    .group-content{
-        display: flex;
-        justify-content: center;
-       flex-wrap: wrap;
-}
+    .mid {
+        .group-content {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
-}
-    
+    }
+
 }

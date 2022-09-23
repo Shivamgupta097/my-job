@@ -2,9 +2,9 @@
     border-radius: 20px;
     padding: 10px;
     width: 620px;
-    // height: 100%;
+
     .body {
-         p {
+        p {
             color: #303F60;
             font-size: 17px;
         }
@@ -16,6 +16,7 @@
             width: 100%;
             overflow-y: auto;
             height: 600px;
+
             .applicant {
                 padding: 9px;
                 gap: 20px;
@@ -80,43 +81,31 @@
 
 
 
-@media  (max-width: 350px) {
 
-        .modal-container{
+
+@media (max-width:450px) {
+
+    .modal-container {
+        width: 100%;
+
+        .main {
             max-width: 250px;
-            .main{
-                min-width: 100%;
-            }
         }
-
     }
 
+}
 
 
 
-@media  (max-width:550px){
-   
-    .modal-container{
-        max-width: 350px;
-        .main{
+@media only screen and (max-width: 780px) {
+
+    .modal-container {
+        max-width: 450px;
+
+        .main {
             min-width: 100%;
         }
+
     }
 
-   } 
-
-
-
-@media  (max-width: 780px) {
-    
-        .modal-container{
-            width: 550px;
-            .main{
-                min-width: 100%;
-            }  
-
-        }
-    
-       }
-
-
+}

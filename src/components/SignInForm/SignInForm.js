@@ -1,4 +1,4 @@
-import React, { useRef,useState  ,useContext } from "react";
+import React, { useRef, useState, useContext } from "react";
 import axios from "axios";
 
 import FormInput from "../common/FormInput";
@@ -8,7 +8,6 @@ import { useNavigate } from "react-router-dom";
 import Cookies from "universal-cookie";
 import "./SignInForm.scss";
 
-// import Cookies from 'universal-cookie';
 
 const defaultFormFields = {
     email: "",
@@ -21,9 +20,9 @@ const SignInForm = () => {
     const [emailError, setEmailError] = useState("");
 
 
-    const {currentUser ,setCurrentUser}  =useContext(UserContext);
-     const navigate = useNavigate();
-    const ref =useRef()
+    const { currentUser, setCurrentUser } = useContext(UserContext);
+    const navigate = useNavigate();
+    const ref = useRef()
 
     const { email, password } = formFields;
 
@@ -38,35 +37,35 @@ const SignInForm = () => {
         event.preventDefault();
 
         //email validation start here
-        const regEx =/[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/
-       
-        if(regEx.test(email)){
+        const regEx = /[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/
 
-        }else{
+        if (regEx.test(email)) {
+
+        } else {
             setEmailError("Please enter a valid email address");
 
         }
 
         //Api fetch for user
-        axios.post("https://jobs-api.squareboat.info/api/v1/auth/login",{
-            email:email,
-            password:password
+        axios.post("https://jobs-api.squareboat.info/api/v1/auth/login", {
+            email: email,
+            password: password
 
-        }).then(response =>{
-            const data =response.data.data;
-            const {token, ...userData} = data;
+        }).then(response => {
+            const data = response.data.data;
+            const { token, ...userData } = data;
             const cookies = new Cookies();
             cookies.set('tkn', token);
             // localStorage.setItem("tkn" ,JSON.stringify(token));
-            localStorage.setItem("user" ,JSON.stringify(userData));
+            localStorage.setItem("user", JSON.stringify(userData));
             //setting the localStorage
             setCurrentUser(JSON.parse(localStorage.getItem("user")));
             //navigate
             navigate('/jobs');
 
-        }).catch(error =>{
+        }).catch(error => {
             console.log(error);
-            if(error.response.status === 401 ||error.response.status === 401){
+            if (error.response.status === 401 || error.response.status === 401) {
                 setError("Incorrect email address or password.");
             }
         });
@@ -74,7 +73,7 @@ const SignInForm = () => {
         setFormFields(defaultFormFields);
     };
     return (
-        <div className="card form-container" style={{width: "557px"}}>
+        <div className="card form-container" style={{ width: "557px" }}>
             <div className="card-body">
                 <div className="card-title">Login</div>
                 <form onSubmit={handleSubmit}>

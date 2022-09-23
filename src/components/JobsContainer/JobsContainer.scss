@@ -3,12 +3,17 @@
     flex-wrap: wrap;
     color: black;
     gap: 18px;
+    padding-bottom: 10rem;
+
     .jobs-content {
         background: #FFFFFF 0% 0% no-repeat padding-box;
         box-shadow: 0px 3px 6px #557DA526;
         border-radius: 5px;
+
         .card-body {
-            min-height:200px;
+            min-height: 200px;
+            width: 270px;
+
             .card-title {
                 font-size: 1.7rem;
                 margin-bottom: 10px;
@@ -21,13 +26,8 @@
         }
 
         .footer {
-            // position: absolute;
-            // bottom: 8px;
-            // display: flex;
-            // justify-content: space-between;
-            // align-items: center;
 
-            .location{
+            .location {
                 margin-top: 10px;
                 position: absolute;
                 left: 8px;
@@ -36,9 +36,9 @@
                 span {
                     margin-left: 8px;
                 }
-    
+
             }
-            
+
             button {
                 position: absolute;
                 right: 8px;
@@ -51,9 +51,35 @@
                 color: #303F60;
             }
         }
-
-
     }
+}
+
+@media (max-width:370px) {
+    .jobs-container {
+        .jobs-content {
+            width: 100%;
+
+            .card-body {
+                width: 100%
+            }
+
+            button {
+                max-width: 8rem;
+
+            }
+        }
+    }
+}
 
 
+@media (max-width:550px) {
+    .jobs-container {
+        .jobs-content {
+            width: 100%;
+
+            .card-body {
+                width: 100%
+            }
+        }
+    }
 }
