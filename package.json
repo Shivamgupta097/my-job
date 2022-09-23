@@ -1,7 +1,7 @@
 {
   "name": "my-jobs",
   "version": "0.1.0",
-  "homepage": "http://shivamgupta097.github.io/my-job",
+  "homepage": "https://shivamgupta097.github.io/my-job",
   "private": true,
   "dependencies": {
     "axios": "^0.27.2",

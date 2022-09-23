@@ -12,7 +12,7 @@ import { ApplicantProvider } from './context/ApplicationContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename='/my-job'>
       <UserProvider>
         <ApplicantProvider>
           <App />
