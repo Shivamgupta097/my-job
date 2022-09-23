@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import Cookies from 'universal-cookie';
 import "./Jobs.scss";
 import { ToastContainer, toast } from 'react-toastify';
@@ -16,14 +16,16 @@ import { ReactComponent as Next } from "../../assets/Nex.svg";
 
 
 const Jobs = () => {
-    const [posts, setPosts] = useState([]);
+    const [posts, setPosts] = useState(null);
     const [page, setPage] = useState(1);
+    const [maxPage, setMaxPage] = useState();
+
+     const navigate = useNavigate();
+
 
     useEffect(() => {
         const cookies = new Cookies();
         const token = cookies.get("tkn");
-
-        console.log(page)
 
         //fetching api
         axios.get(`https://jobs-api.squareboat.info/api/v1/recruiters/jobs?page=${page}`, {
@@ -32,30 +34,31 @@ const Jobs = () => {
             }
         })
             .then(function (response) {
-                const postData = response.data.data.data;
-                setPosts(postData);
+                const postData = response.data.data;
+                return postData
+            }).then(function (data) {
+                const { metadata } = data
+                const { count, limit } = metadata;
+                const max = Math.ceil(eval(count + "/" + limit));
+                setMaxPage(max);
+
+                const getData = data.data;
+                setPosts(getData);
             })
             .catch(function (error) {
                 console.log(error);
+                alert(error.message);
+                navigate("/");
             });
-
-    }, [page])
-
+    }, [page]);
 
     const prevPage = () => {
-        setPage((prev) =>{
-            const n = prev-1;
-            return n >0 ? n:prev;
-        })
+        setPage((prev) => (prev > 1) ? prev - 1 : prev);
     }
 
     const nextPage = () => {
-        setPage((prev) =>{
-            const n = prev+1;
-            return n <6 ? n:prev;
-        })
+        setPage((prev) => (prev < maxPage) ? prev + 1 : prev)
     }
-
 
 
     return (
@@ -71,9 +74,24 @@ const Jobs = () => {
                     <h1>Job posted by you</h1>
                 </div>
                 {/* posts */}
-                {posts ? <JobsContainer posts={posts} /> : <NoJobs />}
+                {posts ?
+                    <div>
+
+                        <JobsContainer posts={posts} />
+                        {/* page change start here */}
+                        <div className="page-btn-container" >
+                            <div onClick={prevPage} className="icon" style={{ cursor: "pointer" }}><Prev /></div>
+                            <div className="page-container"><span className="page">{page}</span></div>
+                            <div onClick={nextPage} className="icon" style={{ cursor: "pointer" }}><Next /></div>
+                        </div>
+                    </div>
+
+                    : <NoJobs />}
+
                 {/* {Modal} */}
                 <ApplicationsContainer />
+
+
                 <ToastContainer
                     position="top-right"
                     autoClose={false}
@@ -84,13 +102,6 @@ const Jobs = () => {
 
                 />
 
-                {/* page change start here */}
-                <div className="page-btn-container" >
-                    <div onClick={prevPage} className="icon"style={{cursor:"pointer"}}><Prev/></div>
-                    <div className="page-container"><span className="page">{page}</span></div>
-                    <div onClick={nextPage} className="icon" style={{cursor:"pointer"}}><Next/></div>
-
-                </div>
             </div>
         </>
     )
