@@ -114,39 +114,45 @@
         padding-bottom: 6rem;
 
         .page-container {
-            background:#43AFFF33;
+            background: #43AFFF33;
             width: 30px;
             height: 30px;
             border-radius: 5px;
             position: relative;
 
 
-            .page{
+            .page {
                 color: #303F60;
                 font-size: 15px;
                 font-weight: 800;
                 position: absolute;
                 top: 6px;
                 left: 10px;
-            
+
             }
         }
-        
+
 
     }
 
-}
-
-
-@media (max-width: 350px) {
-    .job {
-        padding: 0.8rem 3rem 0 3rem;
+    .icon {
+        cursor: pointer;
+        z-index: 100;
     }
-}
 
 
-@media (max-width: 350px) {
-    .job {
-        padding: 0.8rem 5rem 0 6rem;
     }
-}
+
+
+    @media (max-width: 350px) {
+        .job {
+            padding: 0.8rem 3rem 0 3rem;
+        }
+    }
+
+
+    @media (max-width: 350px) {
+        .job {
+            padding: 0.8rem 5rem 0 6rem;
+        }
+    }

@@ -43,23 +43,16 @@ const Jobs = () => {
 
 
     const prevPage = () => {
-        setPage((prev) => {
-            if (prev === 2) {
-
-                let next = prev - 1
-                return (next === 1) ? next : prev;
-            }
-
+        setPage((prev) =>{
+            const n = prev-1;
+            return n >0 ? n:prev;
         })
     }
 
     const nextPage = () => {
-        setPage((prev) => {
-            if (prev === 1) {
-                let next = prev + 1
-                return (next === 2) ? next : prev;
-            }
-
+        setPage((prev) =>{
+            const n = prev+1;
+            return n <6 ? n:prev;
         })
     }
 
@@ -93,9 +86,9 @@ const Jobs = () => {
 
                 {/* page change start here */}
                 <div className="page-btn-container" >
-                    <Prev onClick={prevPage} />
+                    <div onClick={prevPage} className="icon"style={{cursor:"pointer"}}><Prev/></div>
                     <div className="page-container"><span className="page">{page}</span></div>
-                    <Next onClick={nextPage} />
+                    <div onClick={nextPage} className="icon" style={{cursor:"pointer"}}><Next/></div>
 
                 </div>
             </div>
