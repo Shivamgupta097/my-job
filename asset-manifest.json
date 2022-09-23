@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-job/static/css/main.9946ffef.css",
-    "main.js": "/my-job/static/js/main.f5f86c56.js",
+    "main.css": "/my-job/static/css/main.e2a5e0ac.css",
+    "main.js": "/my-job/static/js/main.6a9a8b0d.js",
     "static/media/hero.png": "/my-job/static/media/hero.756e142671f3611336e0.png",
     "static/media/goldline.png": "/my-job/static/media/goldline.e232da60e8d35e8910fd.png",
     "static/media/kanba.png": "/my-job/static/media/kanba.e5efddc466fa970c5e2f.png",
@@ -9,14 +9,16 @@
     "index.html": "/my-job/index.html",
     "static/media/writing.svg": "/my-job/static/media/writing.a97e2fc5d022f94415a01f7dbbab5c82.svg",
     "static/media/curriculum.svg": "/my-job/static/media/curriculum.eabe7f30a1f240b23e648646878aec18.svg",
+    "static/media/Prev.svg": "/my-job/static/media/Prev.f7bb7956480b4fc86d5738e12a0e0ff8.svg",
+    "static/media/Nex.svg": "/my-job/static/media/Nex.6c6e1600c0b129bc6f387ff4775b2626.svg",
     "static/media/crossIcon.svg": "/my-job/static/media/crossIcon.901f9afd97b4b6bdbe9e0cf1aa660683.svg",
     "static/media/locationIcon.svg": "/my-job/static/media/locationIcon.ca31481a4af9374a59d346dd4cda462e.svg",
     "static/media/downArrow.svg": "/my-job/static/media/downArrow.7e1d16da720fd631e3b1c3aa2954f1c7.svg",
-    "main.9946ffef.css.map": "/my-job/static/css/main.9946ffef.css.map",
-    "main.f5f86c56.js.map": "/my-job/static/js/main.f5f86c56.js.map"
+    "main.e2a5e0ac.css.map": "/my-job/static/css/main.e2a5e0ac.css.map",
+    "main.6a9a8b0d.js.map": "/my-job/static/js/main.6a9a8b0d.js.map"
   },
   "entrypoints": [
-    "static/css/main.9946ffef.css",
-    "static/js/main.f5f86c56.js"
+    "static/css/main.e2a5e0ac.css",
+    "static/js/main.6a9a8b0d.js"
   ]
 }
