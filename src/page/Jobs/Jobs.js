@@ -26,7 +26,7 @@ const Jobs = () => {
         console.log(page)
 
         //fetching api
-        axios.get(`https://jobs-api.squareboat.info/api/v1/recruiters/jobs?${page}`, {
+        axios.get(`https://jobs-api.squareboat.info/api/v1/recruiters/jobs?page=${page}`, {
             headers: {
                 Authorization: token
             }
@@ -41,14 +41,13 @@ const Jobs = () => {
 
     }, [page])
 
-    console.log(page)
 
     const prevPage = () => {
         setPage((prev) => {
-            if (prev > 0 && prev < 3) {
+            if (prev === 2) {
 
-                const next = prev - 1
-                return (next > 0 && next < 3) ? next : prev;
+                let next = prev - 1
+                return (next === 1) ? next : prev;
             }
 
         })
@@ -56,9 +55,9 @@ const Jobs = () => {
 
     const nextPage = () => {
         setPage((prev) => {
-            if (prev > 0 && prev < 3) {
-                const next = prev + 1
-                return (next > 0 && next < 3) ? next : prev;
+            if (prev === 1) {
+                let next = prev + 1
+                return (next === 2) ? next : prev;
             }
 
         })
@@ -89,6 +88,7 @@ const Jobs = () => {
                     closeOnClick
                     rtl={false}
                     pauseOnFocusLoss
+
                 />
 
                 {/* page change start here */}
