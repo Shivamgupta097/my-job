@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-job/static/css/main.8ec4e6f1.css",
-    "main.js": "/my-job/static/js/main.0c7ceac9.js",
+    "main.css": "/my-job/static/css/main.6818f6d2.css",
+    "main.js": "/my-job/static/js/main.78250b0e.js",
     "static/media/hero.png": "/my-job/static/media/hero.756e142671f3611336e0.png",
     "static/media/goldline.png": "/my-job/static/media/goldline.e232da60e8d35e8910fd.png",
     "static/media/kanba.png": "/my-job/static/media/kanba.e5efddc466fa970c5e2f.png",
@@ -11,11 +11,11 @@
     "static/media/crossIcon.svg": "/my-job/static/media/crossIcon.901f9afd97b4b6bdbe9e0cf1aa660683.svg",
     "static/media/locationIcon.svg": "/my-job/static/media/locationIcon.ca31481a4af9374a59d346dd4cda462e.svg",
     "static/media/downArrow.svg": "/my-job/static/media/downArrow.7e1d16da720fd631e3b1c3aa2954f1c7.svg",
-    "main.8ec4e6f1.css.map": "/my-job/static/css/main.8ec4e6f1.css.map",
-    "main.0c7ceac9.js.map": "/my-job/static/js/main.0c7ceac9.js.map"
+    "main.6818f6d2.css.map": "/my-job/static/css/main.6818f6d2.css.map",
+    "main.78250b0e.js.map": "/my-job/static/js/main.78250b0e.js.map"
   },
   "entrypoints": [
-    "static/css/main.8ec4e6f1.css",
-    "static/js/main.0c7ceac9.js"
+    "static/css/main.6818f6d2.css",
+    "static/js/main.78250b0e.js"
   ]
 }
