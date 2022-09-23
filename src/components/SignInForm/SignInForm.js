@@ -9,6 +9,10 @@ import Cookies from "universal-cookie";
 import "./SignInForm.scss";
 
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 const defaultFormFields = {
     email: "",
     password: "",
@@ -46,7 +50,9 @@ const SignInForm = () => {
 
         }
 
-        //Api fetch for user
+        // getUser(email,password,error,setError);
+
+        // Api fetch for user
         axios.post("https://jobs-api.squareboat.info/api/v1/auth/login", {
             email: email,
             password: password
@@ -69,6 +75,10 @@ const SignInForm = () => {
                 setError("Incorrect email address or password.");
             }
         });
+
+        //toast
+        toast("Wow so easy!");
+
 
         setFormFields(defaultFormFields);
     };

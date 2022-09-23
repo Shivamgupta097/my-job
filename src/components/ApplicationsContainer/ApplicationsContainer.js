@@ -25,7 +25,7 @@ const ApplicationsContainer = () => {
             setApplicantData(data);
         }).catch((error => console.log(error)))
 
-    }, [id])
+    }, [id]);
 
     return (
 

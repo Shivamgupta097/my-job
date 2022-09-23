@@ -1,6 +1,6 @@
 
-import { createContext, useEffect, useState } from "react";
-import { axios } from "axios";
+import { createContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 ///as actually value that we have to access
 
@@ -15,10 +15,14 @@ let data = JSON.parse(localStorage.getItem("user"));
 
 
 export const UserProvider = ({ children }) => {
-
   const [currentUser, setCurrentUser] = useState(data);
-  const value = { currentUser, setCurrentUser };
-// console.log(data);
+
+  const navigate = useNavigate();
+
+
+
+  const value = { currentUser, setCurrentUser};
+
 
 
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;

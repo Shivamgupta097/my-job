@@ -11,7 +11,7 @@
         width: 4.8rem;
         align-items: center;
 
-        &:hover{
+        &:hover {
             cursor: pointer;
         }
 
@@ -104,6 +104,35 @@
                 }
             }
         }
+    }
+
+    .page-btn-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        padding-bottom: 6rem;
+
+        .page-container {
+            background:#43AFFF33;
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+            position: relative;
+
+
+            .page{
+                color: #303F60;
+                font-size: 15px;
+                font-weight: 800;
+                position: absolute;
+                top: 6px;
+                left: 10px;
+            
+            }
+        }
+        
+
     }
 
 }

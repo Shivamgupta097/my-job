@@ -1,0 +1,7 @@
+<svg id="Prev" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="Rectangle_205" data-name="Rectangle 205" fill="none" stroke="#303f60" stroke-width="1" opacity="0.5">
+    <rect width="30" height="30" rx="5" stroke="none"/>
+    <rect x="0.5" y="0.5" width="29" height="29" rx="4.5" fill="none"/>
+  </g>
+  <path id="Icon_awesome-caret-down" data-name="Icon awesome-caret-down" d="M1.484,13.5h8.868a.65.65,0,0,1,.486,1.116L6.406,18.826a.717.717,0,0,1-.975,0L1,14.616A.65.65,0,0,1,1.484,13.5Z" transform="translate(31.018 9.206) rotate(90)" fill="#7a839a" opacity="0.5"/>
+</svg>
