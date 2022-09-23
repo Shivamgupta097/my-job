@@ -1,11 +1,11 @@
 .home {
     height: 395px;
     background: linear-gradient(248deg, #303F60, #1A253C);
-    padding: 6rem 16.7rem 0 5rem;
+    padding: 6rem 16.7rem 7 19rem;
 }
 
 @media (min-width:250px) and (max-width: 768px) {
     .home {
-        padding: 6rem 10rem 70rem 5rem;
+        padding: 6rem 10rem 5rem 10rem;
     }
 }
