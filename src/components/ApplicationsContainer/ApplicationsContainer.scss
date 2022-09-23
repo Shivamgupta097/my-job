@@ -1,0 +1,45 @@
+.modal-container {
+    border-radius: 20px;
+    padding: 10px;
+    width: 620px;
+
+    .body {
+        p {
+            color: #303F60;
+            font-size: 17px;
+        }
+
+        .applicant-container {
+            background-color: #A9AFBC;
+            background: #a9afbc38 0% 0% no-repeat padding-box;
+            border-radius: 10px;
+            width: 100%;
+            overflow-y: auto;
+            height: 600px;
+
+            .applicant {
+                padding: 9px;
+                gap: 20px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+
+
+        }
+    }
+}
+
+@media (max-width:450px) {
+
+    .main {
+        max-width: 250px;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .main {
+        min-width: 100%;
+    }
+
+}

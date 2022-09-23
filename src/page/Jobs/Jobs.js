@@ -7,7 +7,7 @@ import "./Jobs.scss";
 import homeIcon from "../../assets/homeIcon.png";
 import NoJobs from '../../components/NoJobs';
 import JobsContainer from '../../components/JobsContainer';
-import Modal from '../../components/Modal';
+import ApplicationsContainer from '../../components/ApplicationsContainer';
 
 
 const Jobs = () => {
@@ -48,7 +48,7 @@ const Jobs = () => {
                 {/* posts */}
                 {posts ? <JobsContainer posts={posts} /> : <NoJobs />}
                 {/* {Modal} */}
-                <Modal />
+                <ApplicationsContainer />
             </div>
         </>
     )
